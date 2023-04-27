@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YOUR_APP Splashscreen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            color: #C9F0E9;
+            -webkit-app-region:drag;
+            font-family: 'Fira Sans', sans-serif;
+        }
+        #container {
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            position: relative;
+            background-color: #02C9B1;
+        }
+        #header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 20px;
+            padding: 10px;
+        }
+        #header svg {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            margin-left: 4px;
+            fill: #C9F0E9;
+            -webkit-app-region:no-drag;
+        }
+        #header svg:hover {
+            fill: #fff;
+        }
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #content img {
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            display: block;
+        }
+        #content p{
+            font-size: medium;
+            font-weight: normal;
+            color: white;
+        }
+        #footer #start {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+        }
+        #footer #company {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 10px;
+        }
+    </style>
+    <script src="./main.js"></script>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" onclick="minimizeWindow()">
+            <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm88 200H296c13.3 0 24 10.7 24 24s-10.7 24-24 24H152c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onclick="closeWindow()">
+            <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
+        </svg>
+    </div>
+    <div id="content">
+        <img src="../../public/assets/images/LogoLight.svg" alt="LightLogo" class="mb-10" style="width: 60px">
+        <p class="text-white text-sm mt-4">Your beautiful splash screen...</p>
+    </div>
+    <div id="footer">
+        <span id="start">Loading...</span>
+        <span id="company" class="absolute left-5 text-sm text-white bottom-10 right-20">
+         &copy;
+        <span id="copyright">
+            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+        </span>
+        Your app
+    </span>
+    </div>
+</div>
+</body>
+</html>
